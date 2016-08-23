@@ -6,11 +6,11 @@ Este repositorio cuenta con información basica sobre como iniciar en el mundo de
 
 La respuesta es: No, para desarrollar solo se necesita mucha iniciativa por parte de la persona que quiera hacerlo y contar con el apoyo de personas que puedan orientar en un inicio, para que posteriormente se avance en el aprendizaje de una forma casi que independiente.
 
-The process involves three steps:
+para este proceso es necesario tener en cuenta los siguientes aspectos para crear una aplicación innovadora:
 
-1. Data - Prepare data for your apps with [ArcGIS Online](http://www.arcgis.com).
-2. Design - Style maps and layers for your apps with the [ArcGIS Online Map and Scene Viewer](http://www.arcgis.com).
-3. Develop - Use maps and layers in your apps with [ArcGIS templates, builders and APIs](http://developers.arcgis.com).
+1. Datos: para la cración de la aplicación es necesario contar los datos necesarios y conocer la manera de prepararlos para nuestra aplicación.
+2. Diseño: los estilos, colores y estética hacen parte fundamental de nuestra aplicación en el momento de crearla
+3. Desarrollo: como se mencionaba en un principio de este repositorio, el propósito de este es acercar a las personas al desarrollo para que sus aplicaciones no tengan limites en el momento de crearlas.
 
 ![Process](./Imagen_Inicio.png)
 
