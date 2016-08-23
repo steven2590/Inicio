@@ -1,4 +1,4 @@
-# ArcGIS para desarrolladores, no desarrolladores
+# ArcGIS para Desarrolladores, no Desarrolladores
 
 Este repositorio cuenta con información basica sobre como iniciar en el mundo de desarrollo con ArcGIS Online.
 
