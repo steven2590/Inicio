@@ -8,44 +8,37 @@ La respuesta es: No, para desarrollar solo se necesita mucha iniciativa por part
 
 para este proceso es necesario tener en cuenta los siguientes aspectos para crear una aplicación innovadora:
 
-1. Datos: para la cración de la aplicación es necesario contar los datos necesarios y conocer la manera de prepararlos para nuestra aplicación.
-2. Diseño: los estilos, colores y estética hacen parte fundamental de nuestra aplicación en el momento de crearla
-3. Desarrollo: como se mencionaba en un principio de este repositorio, el propósito de este es acercar a las personas al desarrollo para que sus aplicaciones no tengan limites en el momento de crearlas.
+1. **Datos:** para la cración de la aplicación es necesario contar los datos necesarios y conocer la manera de prepararlos para nuestra aplicación.
+2. **Diseño:** los estilos, colores y estética hacen parte fundamental de nuestra aplicación en el momento de crearla
+3. **Desarrollo:** como se mencionaba en un principio de este repositorio, el propósito de este es acercar a las personas al desarrollo para que sus aplicaciones no tengan limites en el momento de crearlas.
 
 ![Process](./Imagen_Inicio.png)
 
-## Getting Started
+## Que se necesita?
 
-Here's how to get started:
+Para iniciar un proyecto es indispensable:
 
-1. **Sign up for a free** [ArcGIS Developer subscription](https://developers.arcgis.com/en/sign-up/) - Your subscription allows you to download software, register apps, import data, create new services, store maps, perform spatial analysis and more. If you already have an [ArcGIS Organizational subscription](http://www.arcgis.com/features/plans/pricing.html) (with at least publisher level permission) you can use that too. Please note that [free public accounts](https://geonet.esri.com/groups/geodev/blog/2014/10/15/help-i-cant-get-into-developersarcgiscom) and Organizational 'User' accounts will not work.
+1. **Crear ua cuenta de DesarrolladorGratuita** [Suscripción  a ArcGIS Developer ](https://developers.arcgis.com/en/sign-up/) - Esta cuenta le permite descargar software y aplicaciones de la plataforma, de igual forma se puede tener acceso a AGOL (ArcGIS Online. Si ya dispone de una cuenta Organizacional de AGOL, servira de igual forma. 
 
-2. **Start the labs** - You can complete the labs in order or just pick and choose the ones you want to do. It will be easiest to use the data provided (Portland open data), but you feel free to substitute with your own data and augment the steps where necessary. The labs marked with an `*` are the minimum labs you need to complete to build your own custom app from ground zero.
+2. **Realizar los laboratorios propuestos en este repositorio** - A continuación se compartiran una serie de laboratorios, con los que se buscan que se aprenda de una forma interactiva las nociones basicas de desarrollo en la plataforma.
 
-3. **Share your work** - This is 100% optional, but as you are going through, feel free to share your work with others in this [ArcGIS Online Group](#want-to-share-your-work)!
+## Recursos
 
-## Resources
+Estos son recursos muy utiles para el desarrollo de los laboratorios.
 
-Here are the resources you will use for the labs.
+* [ArcGIS for Developers - Cuenta, documentación, ejemplos, Aplicaciones, Descargas](http://developers.arcgis.com)
+* [JS Bin - Visor interactivo de JS](http://jsbin.com)
+* [Una guía sencilla para la creación de un servidor web local (opcional)](https://gist.github.com/jgravois/5e73b56fa7756fd00b89)
 
-* [ArcGIS for Developers - Account, Documentation, Samples, Apps, Downloads](http://developers.arcgis.com)
-* [Esri Open Source Projects - More source code](http://esri.github.io)
-* [ArcGIS Online Maps and Apps - Map Viewer, My Content, Item Management](http://arcgis.com)
-* [ArcGIS Online Help - Documentation and Tutorials](http://doc.arcgis.com/en/arcgis-online/)
-* [JS Bin - Interactive JS coding](http://jsbin.com)
-* [A simple guide for setting up a local web server (optional)](https://gist.github.com/jgravois/5e73b56fa7756fd00b89)
 
-> NOTE: If you are brand new to ArcGIS, we recommend that you use your developer account to sign into [developers.arcgis.com](http://developers.arcgis.com) to familiarize yourself with the site and then sign into [ArcGIS.com](https://www.arcgis.com) to learn how to [create your first map](http://doc.arcgis.com/en/arcgis-online/create-maps/make-your-first-map.htm).
+## Laboratorios
+El flujo de trabajo se ha´ra de la siguiente forma :
 
-## Labs
+Datos - Diseño - Desarrollo. para este ejercicio se hará uso de datos de Colombia alojados en mi cuenta, pero si desean pueden utilixar datos propios u obtenerlos del [Portal de Datos Abiertos de Esri Colombia](http://datosabiertos.esri.co/) En este caso se utilizan los datos abiertos Portland, pero no dude en utilizar sus propios datos para trabajar a través y construir sus propias soluciones personalizadas. Puede que le resulte útil a lo sigue con el Hackerlab diapositivas .
 
-The labs start from ground-zero and work through the Data - Design - Develop process. In this case we use Portland open data, but feel free to use your own data to work through and build your own custom solutions. You might find it helpful to follow along with the [Hackerlab Slides](http://slides.com/alaframboise/geodev-hackerlabs).
+NOTA: Los laboratorios marcados con un *son el mínimo necesario para construir su propia aplicación de la zona cero. Los otros son opcionales.
 
-NOTE: Labs marked with an `*` are the minimum required to build your own app from ground zero. The others are optional.
-
-Let's get started!
-
-![Steps](./geodev-hackerlabs-apps.png)
+¡Empecemos!![Steps](./geodev-hackerlabs-apps.png)
 
 ### 1. Data
 
