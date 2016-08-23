@@ -24,7 +24,7 @@ Para iniciar un proyecto es indispensable:
 
 ## Recursos
 
-Estos son recursos muy utiles para el desarrollo de los laboratorios.
+Estos son recursos muy utiles para el desarrollo de los laboratorios..
 
 * [ArcGIS for Developers - Cuenta, documentación, ejemplos, Aplicaciones, Descargas](http://developers.arcgis.com)
 * [JS Bin - Visor interactivo de JS](http://jsbin.com)
