@@ -12,7 +12,7 @@ The process involves three steps:
 2. Design - Style maps and layers for your apps with the [ArcGIS Online Map and Scene Viewer](http://www.arcgis.com).
 3. Develop - Use maps and layers in your apps with [ArcGIS templates, builders and APIs](http://developers.arcgis.com).
 
-![Process](http://desarrolladores.esri.co/images/Semillero/quienes_somos.png)
+![Process](./Imagen_Inicio.png)
 
 ## Getting Started
 
