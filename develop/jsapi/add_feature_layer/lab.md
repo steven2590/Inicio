@@ -4,6 +4,25 @@ En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScrip
 
 1. Haga clic  Click [create_starter_map/index.html](../create_starter_map/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
 
+Ya con el código pegado enjsbin.com nos disponemos a modificar la latitud y longitud del Web Map y el zoom que qeremos sobre el mapa.
+
+```
+	   var view = new MapView({
+        container: "viewDiv",
+        map: map,
+        center: [0, 0],
+        zoom: 2
+```
+```
+	   var view = new MapView({
+        container: "viewDiv",
+        map: map,
+        center: [-74, 4],
+        zoom: 2
+```
+
+
+
 2. Dentro del require agregue "esri/layers/FeatureLayer"
 
   ```javascript
@@ -14,7 +33,7 @@ En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScrip
     "esri/layers/FeatureLayer",
     "dojo/domReady!"
 ```
-De igual forma agregue dentro del javascript la funcion FeatureLayer:
+De igual forma agregue la funcion FeatureLayer:
 
 ```
   ], function(Map, MapView, FeatureLayer) {
