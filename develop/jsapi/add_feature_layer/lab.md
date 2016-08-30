@@ -1,11 +1,10 @@
 ###Agregar una capa a un mapa
 
-En este laboratorio se le agrega una capa de entidades a una API de ArcGIS para JavaScript aplicación.
+En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScript.
 
+1. Haga clic  Click [create_starter_map/index.html](../create_starter_map/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
 
-1. Haga clic  Click [create_starter_map/index.html](../create_starter_map/index.html) and copy the contents to a new [jsbin.com](http://jsbin.com).
-
-2. copie el contenido a una nueva `JSBin` > `HTML`, update the `require` statement and `function` definition:
+2. Dentro del require agregue "esri/layers/FeatureLayer"
 
   ```javascript
   require([
@@ -14,10 +13,14 @@ En este laboratorio se le agrega una capa de entidades a una API de ArcGIS para 
     /*** ADD ***/
     "esri/layers/FeatureLayer",
     "dojo/domReady!"
+```
+De igual forma agregue dentro del javascript la funcion FeatureLayer:
+
+```
   ], function(Map, MapView, FeatureLayer) {
   ```
 
-3. Now add the Styled Rail Lines to the map:
+3. De igual forma agregue dentro del javascript cree la variable que alojará el servicio de mapa (Map Service):
 
   ```javascript
     ...
