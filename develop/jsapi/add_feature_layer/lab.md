@@ -1,10 +1,11 @@
-###Add a feature layer to a map
+###Agregar una capa a un mapa
 
-In this lab you will add a feature layer to an ArcGIS API for JavaScript application. 
+En este laboratorio se le agrega una capa de entidades a una API de ArcGIS para JavaScript aplicación.
 
-1. Click [create_starter_map/index.html](../create_starter_map/index.html) and copy the contents to a new [jsbin.com](http://jsbin.com).
 
-2. In `JSBin` > `HTML`, update the `require` statement and `function` definition:
+1. Haga clic  Click [create_starter_map/index.html](../create_starter_map/index.html) and copy the contents to a new [jsbin.com](http://jsbin.com).
+
+2. copie el contenido a una nueva `JSBin` > `HTML`, update the `require` statement and `function` definition:
 
   ```javascript
   require([

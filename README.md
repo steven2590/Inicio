@@ -18,7 +18,7 @@ para este proceso es necesario tener en cuenta los siguientes aspectos para crea
 
 Para iniciar un proyecto es indispensable:
 
-1. **Crear ua cuenta de DesarrolladorGratuita** [Suscripción  a ArcGIS Developer ](https://developers.arcgis.com/en/sign-up/) - Esta cuenta le permite descargar software y aplicaciones de la plataforma, de igual forma se puede tener acceso a AGOL (ArcGIS Online. Si ya dispone de una cuenta Organizacional de AGOL, servira de igual forma. 
+1. **Crear ua cuenta de Desarrollador gratuita** [Suscripción  a ArcGIS Developer ](https://developers.arcgis.com/en/sign-up/) - Esta cuenta le permite descargar software y aplicaciones de la plataforma, de igual forma se puede tener acceso a AGOL (ArcGIS Online). Si ya dispone de una cuenta Organizacional de AGOL, servira de igual forma. 
 
 2. **Realizar los laboratorios propuestos en este repositorio** - A continuación se compartiran una serie de laboratorios, con los que se buscan que se aprenda de una forma interactiva las nociones basicas de desarrollo en la plataforma.
 
@@ -32,37 +32,20 @@ Estos son recursos muy utiles para el desarrollo de los laboratorios..
 
 
 ## Laboratorios
-El flujo de trabajo se ha´ra de la siguiente forma :
+El flujo de trabajo se hará de la siguiente forma :
 
-Datos - Diseño - Desarrollo. para este ejercicio se hará uso de datos de Colombia alojados en mi cuenta, pero si desean pueden utilixar datos propios u obtenerlos del [Portal de Datos Abiertos de Esri Colombia](http://datosabiertos.esri.co/) En este caso se utilizan los datos abiertos Portland, pero no dude en utilizar sus propios datos para trabajar a través y construir sus propias soluciones personalizadas. Puede que le resulte útil a lo sigue con el Hackerlab diapositivas .
+Datos - Diseño - Desarrollo. 
 
-NOTA: Los laboratorios marcados con un *son el mínimo necesario para construir su propia aplicación de la zona cero. Los otros son opcionales.
+para este ejercicio se hará uso de datos de Colombia alojados en mi cuenta, pero si desean pueden utilizar datos propios u obtenerlos del [Portal de Datos Abiertos de Esri Colombia](http://datosabiertos.esri.co/) En este caso se utilizan los datos abiertos Portland, pero no dude en utilizar sus propios datos para construir sus propias soluciones personalizadas. 
 
-¡Empecemos!![Steps](./geodev-hackerlabs-apps.png)
+Sin más preambulo 
 
-### 1. Data
+### 1. Datos
 
-Creating and importing data interactively is a fast and effective way to prepare data for both prototype and production app development.
-
-In these labs you will import, create and manage data using the [ArcGIS Online](http://arcgis.com) and [ArcGIS for Developers](http://developers.arcgis.com) website and tools. You will also use the map viewer to perform data enrichment, the process of adding social demographic information to a dataset, and spatial analyses, the process of creating new data based on spatial criteria. You will also explore the feature service REST endpoints and use them in a simple web app to access and display spatial data.
-
-ArcGIS Online and Developer Tools
-* [Import Data](./data/import_data/lab.md)*
-* [Create and Edit Data](./data/create_and_edit_data/lab.md)
-* [Share Data](./data/share_data/lab.md)
-* [View via REST](./data/view_via_rest/lab.md)
-* [View in a Map](./data/view_in_a_map/lab.md)
-* [GeoEnrich Data](./data/geoenrich_data/lab.md)*
-* [Create Buffers](/data/create_buffers/lab.md)
-* [Create Walk Areas](./data/create_walk_areas/lab.md)
-* [Extract Walkable Neighborhoods](./data/extract_walkable_neighborhoods/lab.md)
-* [Filter Data](./data/filter_data/lab.md)
-* [Create Authenticated Traffic Layer](./data/create_authenticated_traffic_layer/lab.md)
+El uso de datos dentro de una aplicación geográfica es sumamente importante, ya que apartir de ellos es que se puede hacer representaciones y analisis muy importante, en el siguiente laboratorio vamos a ver como a traves d eun servicio previamente publicado en AGOL, es consumido por una aplicación creada por nosotros mismos sin necesidad de hacer uso directo de la plataforma de ArcGIS Online 
 
 Code
 * [Add a layer to an app](./develop/jsapi/add_feature_layer/lab.md)
-* [GeometryEngine Buffering](./develop/jsapi/buffer_with_geometry_engine/lab.md)
- 
 ### 2. Design
 
 Creating web maps with great cartography is one of the most important steps to building effective mapping applications. Styling maps interactively can also be huge time-saver in app development.
