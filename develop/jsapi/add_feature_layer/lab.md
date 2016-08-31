@@ -4,7 +4,7 @@ En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScrip
 
 1. Haga clic  Click [create_starter_map/index.html](../create_starter_map/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
 
-Ya con el código pegado enjsbin.com nos disponemos a modificar la latitud y longitud del Web Map y el zoom que qeremos sobre el mapa.
+Ya con el código pegado en jsbin.com nos disponemos a modificar la latitud y longitud del Web Map ademas del zoom que queremos sobre el mapa.
 
 ```
 	   var view = new MapView({
@@ -17,13 +17,13 @@ Ya con el código pegado enjsbin.com nos disponemos a modificar la latitud y long
 	   var view = new MapView({
         container: "viewDiv",
         map: map,
-        center: [-74, 4],
-        zoom: 2
+        center: [-74, 4.5],
+        zoom: 6
 ```
 
 
 
-2. Dentro del require agregue "esri/layers/FeatureLayer"
+2. Dentro del require agregue "esri/layers/FeatureLayer" y "esri/PopupTemplate",
 
   ```javascript
   require([
@@ -31,15 +31,29 @@ Ya con el código pegado enjsbin.com nos disponemos a modificar la latitud y long
     "esri/views/MapView",
     /*** ADD ***/
     "esri/layers/FeatureLayer",
+    "esri/PopupTemplate",
+
     "dojo/domReady!"
 ```
-De igual forma agregue la funcion FeatureLayer:
+De igual forma agregue la funcion FeatureLayer y PopupTemplate:
 
 ```
-  ], function(Map, MapView, FeatureLayer) {
+  ], function(Map, MapView,FeatureLayer,PopupTemplate) {
   ```
+3. Antes de usar el servicio de una capa geográfica se propone configurar la ventana emergente o Pop Up de cada entidad, es por esto que se sugiere copiar el siguiente segmento de codigo:
 
-3. De igual forma agregue dentro del javascript cree la variable que alojará el servicio de mapa (Map Service):
+```
+var template = new PopupTemplate({
+        title: "Localidades de Bogotá",
+        content: 
+          "<ul><li>Localidad: {NOMBRE_COM}" +
+          "<li>Número de Localidad: {NUMERO_COM}", 
+ });
+
+////NOMBRE_COM y NUMERO_COM son los atributos que deseamos que aparezcan en el Pop Up
+```
+
+4. A continuación agregue dentro del javascript  la variable que alojará el servicio de mapa (Map Service)para este ejemplo usaremos un servicio de las localidades de Bogotá:
 
   ```javascript
     ...
@@ -47,21 +61,11 @@ De igual forma agregue la funcion FeatureLayer:
     /*** ADD ***/
 
     var featureLayer = new FeatureLayer({
-      url: "https://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/PDX_Rail_Lines_Styled/FeatureServer/0"
+      url: "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/services/Localidades_Bogota/FeatureServer/0"
     });
 
     map.add(featureLayer);
   ```
 
-4. Confirm that the JSBin `Output` panel shows a map with rail lines.
+4. Despues de haber realizado el proceso el resultado debe ser muy similar a este:
 
-Your app should look something like this:
-* [Code](index.html)
-* [Live App](http://esri.github.io/geodev-hackerlabs/develop/jsapi/add_feature_layer/index.html)
-
-###Bonus
-* Add a [Rail Stops feature layer](http://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/PDX_Rail_Stops_Styled/FeatureServer/0) to the map,
- and then add a [Neighborhoods feature layer](http://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/PDX_Neighborhoods_Styled/FeatureServer/0).
-* Ensure the layers are ordered with polygons on the bottom, lines and then points on top.
-* If you added additional layers using the `add()` method, try the `addMany()` method instead. Read up on the `layers` collection and see how the API gives you a few ways to [add layers to a map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers).
-* The 4.0 JS API works closely with ArcGIS Portals. Instead of the Feature Service URL, [use the Portal Item ID](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#portalItem) to add layers. See the URLs of the Portal Items for [Stops](http://www.arcgis.com/home/item.html?id=a77a0ed75b0245dea165c31be5906edc), [Lines](http://www.arcgis.com/home/item.html?id=2ebbbd8f41bc4cc49586ef853b9f81cc) and [Neighborhoods](http://www.arcgis.com/home/item.html?id=a77a0ed75b0245dea165c31be5906edc) to get their IDs.

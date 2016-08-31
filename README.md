@@ -44,8 +44,9 @@ Sin más preambulo
 
 El uso de datos dentro de una aplicación geográfica es sumamente importante, ya que apartir de ellos es que se puede hacer representaciones y analisis muy importante, en el siguiente laboratorio vamos a ver como a traves d eun servicio previamente publicado en AGOL, es consumido por una aplicación creada por nosotros mismos sin necesidad de hacer uso directo de la plataforma de ArcGIS Online 
 
-Code
-* [Add a layer to an app](./develop/jsapi/add_feature_layer/lab.md)
+Ejercicio
+* Agregar una capa geográfica a una Apllicación[Add a layer to an app](./develop/jsapi/add_feature_layer/lab.md)
+
 ### 2. Design
 
 Creating web maps with great cartography is one of the most important steps to building effective mapping applications. Styling maps interactively can also be huge time-saver in app development.
