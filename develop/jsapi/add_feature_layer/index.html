@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>Add Feature Layer</title>
+  <title>JS API Starter App</title>
 
   <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
 
@@ -22,36 +22,32 @@
       "esri/Map",
       "esri/views/MapView",
       "esri/layers/FeatureLayer",
+      "esri/PopupTemplate",
       "dojo/domReady!"
-    ], function(Map, MapView, FeatureLayer) {
-
+    ], function(Map, MapView,FeatureLayer,PopupTemplate) {
       var map = new Map({
         basemap: "dark-gray"
       });
-
       var view = new MapView({
         container: "viewDiv",
         map: map,
-        center: [0, 0],
-        zoom: 15
+        center: [-74.1, 4.6],
+        zoom: 11
       });
+      var template = new PopupTemplate({
+        title: "Localidades de Bogotá",
+        content: 
+          "<ul><li>Localidad: {NOMBRE_COM}" +
+          "<li>Número de Localidad: {NUMERO_COM}", 
+ });
 
-      var featureLayer1 = new FeatureLayer({
-        url: "https://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/PDX_Neighborhoods/FeatureServer/0"
+////NOMBRE_COM y NUMERO_COM son los atributos que deseamos que aparezcan en el Pop Up//
+       featureLayer = new FeatureLayer({
+        url: "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/services/Localidades_Bogota/FeatureServer/0",
+        outFields: ["*"],
+        popupTemplate: template
       });
-
-      var featureLayer2 = new FeatureLayer({
-        url: "https://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/PDX_Rail_Lines_Styled/FeatureServer/0"
-      });
-
-      var featureLayer3 = new FeatureLayer({
-        url: "http://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/PDX_Rail_Stops_Styled/FeatureServer/0"
-      });
-
-      map.add(featureLayer1);
-      map.add(featureLayer2);
-      map.add(featureLayer3);
-
+      map.add(featureLayer);
     });
   </script>
 </head>

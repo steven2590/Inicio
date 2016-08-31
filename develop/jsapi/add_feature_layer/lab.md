@@ -17,8 +17,8 @@ Ya con el código pegado en jsbin.com nos disponemos a modificar la latitud y lon
 	   var view = new MapView({
         container: "viewDiv",
         map: map,
-        center: [-74, 4.5],
-        zoom: 6
+        center: [-74.1, 4.6],
+        zoom: 11
 ```
 
 
@@ -50,8 +50,7 @@ var template = new PopupTemplate({
           "<li>Número de Localidad: {NUMERO_COM}", 
  });
 
-////NOMBRE_COM y NUMERO_COM son los atributos que deseamos que aparezcan en el Pop Up
-```
+////NOMBRE_COM y NUMERO_COM son los atributos que deseamos que aparezcan en el Pop Up//```
 
 4. A continuación agregue dentro del javascript  la variable que alojará el servicio de mapa (Map Service)para este ejemplo usaremos un servicio de las localidades de Bogotá:
 
@@ -60,12 +59,15 @@ var template = new PopupTemplate({
 
     /*** ADD ***/
 
-    var featureLayer = new FeatureLayer({
-      url: "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/services/Localidades_Bogota/FeatureServer/0"
-    });
-
-    map.add(featureLayer);
+    featureLayer = new FeatureLayer({
+        url: "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/services/Localidades_Bogota/FeatureServer/0",
+        outFields: ["*"],
+        popupTemplate: template
+      });
+      map.add(featureLayer);
   ```
 
 4. Despues de haber realizado el proceso el resultado debe ser muy similar a este:
+
+* [Codigo](index.html)
 
