@@ -20,7 +20,7 @@ En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScrip
 De igual forma agregue la funcion FeatureLayer y PopupTemplate:
 
 ```
-  ], function(Map, MapView,FeatureLayer,PopupTemplate) {
+  ], function(Map, MapView,  FeatureLayer,PopupTemplate) {
   ```
 
 3.Ya con el código pegado en jsbin.com nos disponemos a modificar la latitud y longitud del Web Map ademas del zoom que queremos sobre el mapa.
@@ -51,7 +51,7 @@ var template = new PopupTemplate({
  });
 ```
 
-////NOMBRE_COM y NUMERO_COM son los atributos que deseamos que aparezcan en el Pop Up//```
+NOMBRE_COM y NUMERO_COM son los atributos que deseamos que aparezcan en el Pop Up
 
 5. A continuación agregue dentro del javascript  la variable que alojará el servicio de mapa (Map Service)para este ejemplo usaremos un servicio de las localidades de Bogotá:
 
