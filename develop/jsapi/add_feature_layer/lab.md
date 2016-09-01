@@ -30,15 +30,15 @@ Ya con el código pegado en jsbin.com nos disponemos a modificar la latitud y lon
     "esri/Map",
     "esri/views/MapView",
     /*** ADD ***/
-    "esri/layers/FeatureLayer",
-    "esri/PopupTemplate",
+    #"esri/layers/FeatureLayer",
+    #"esri/PopupTemplate",
 
     "dojo/domReady!"
 ```
 De igual forma agregue la funcion FeatureLayer y PopupTemplate:
 
 ```
-  ], function(Map, MapView,FeatureLayer,PopupTemplate) {
+  ], function(Map, MapView,#FeatureLayer,#PopupTemplate) {
   ```
 3. Antes de usar el servicio de una capa geográfica se propone configurar la ventana emergente o Pop Up de cada entidad, es por esto que se sugiere copiar el siguiente segmento de codigo:
 
@@ -49,6 +49,7 @@ var template = new PopupTemplate({
           "<ul><li>Localidad: {NOMBRE_COM}" +
           "<li>Número de Localidad: {NUMERO_COM}", 
  });
+```
 
 ////NOMBRE_COM y NUMERO_COM son los atributos que deseamos que aparezcan en el Pop Up//```
 
