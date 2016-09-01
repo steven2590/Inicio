@@ -4,7 +4,26 @@ En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScrip
 
 1. Haga clic  Click [create_starter_map/index.html](../create_starter_map/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
 
-Ya con el código pegado en jsbin.com nos disponemos a modificar la latitud y longitud del Web Map ademas del zoom que queremos sobre el mapa.
+2. Dentro del require agregue "esri/layers/FeatureLayer" y "esri/PopupTemplate",
+
+  ```javascript
+  require([
+    "esri/Map",
+    "esri/views/MapView",
+    /*** ADD ***/
+
+    "esri/layers/FeatureLayer",
+    "esri/PopupTemplate",
+
+    "dojo/domReady!"
+```
+De igual forma agregue la funcion FeatureLayer y PopupTemplate:
+
+```
+  ], function(Map, MapView,FeatureLayer,PopupTemplate) {
+  ```
+
+3.Ya con el código pegado en jsbin.com nos disponemos a modificar la latitud y longitud del Web Map ademas del zoom que queremos sobre el mapa.
 
 ```
 	   var view = new MapView({
@@ -21,26 +40,7 @@ Ya con el código pegado en jsbin.com nos disponemos a modificar la latitud y lon
         zoom: 11
 ```
 
-
-
-2. Dentro del require agregue "esri/layers/FeatureLayer" y "esri/PopupTemplate",
-
-  ```javascript
-  require([
-    "esri/Map",
-    "esri/views/MapView",
-    /*** ADD ***/
-    #"esri/layers/FeatureLayer",
-    #"esri/PopupTemplate",
-
-    "dojo/domReady!"
-```
-De igual forma agregue la funcion FeatureLayer y PopupTemplate:
-
-```
-  ], function(Map, MapView,#FeatureLayer,#PopupTemplate) {
-  ```
-3. Antes de usar el servicio de una capa geográfica se propone configurar la ventana emergente o Pop Up de cada entidad, es por esto que se sugiere copiar el siguiente segmento de codigo:
+4. Antes de usar el servicio de una capa geográfica se propone configurar la ventana emergente o Pop Up de cada entidad, es por esto que se sugiere copiar el siguiente segmento de codigo:
 
 ```
 var template = new PopupTemplate({
@@ -53,7 +53,7 @@ var template = new PopupTemplate({
 
 ////NOMBRE_COM y NUMERO_COM son los atributos que deseamos que aparezcan en el Pop Up//```
 
-4. A continuación agregue dentro del javascript  la variable que alojará el servicio de mapa (Map Service)para este ejemplo usaremos un servicio de las localidades de Bogotá:
+5. A continuación agregue dentro del javascript  la variable que alojará el servicio de mapa (Map Service)para este ejemplo usaremos un servicio de las localidades de Bogotá:
 
   ```javascript
     ...
