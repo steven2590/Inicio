@@ -45,5 +45,12 @@ Sin más preambulo
 El uso de datos dentro de una aplicación geográfica es sumamente importante, ya que apartir de ellos es que se puede hacer representaciones y analisis muy importante, en el siguiente laboratorio vamos a ver como a traves d eun servicio previamente publicado en AGOL, es consumido por una aplicación creada por nosotros mismos sin necesidad de hacer uso directo de la plataforma de ArcGIS Online 
 
 Ejercicio
-* Agregar una capa geográfica a una Apllicación[Dé clic aquí para inicar](./develop/jsapi/add_feature_layer/lab.md)
+* Agregar una capa geográfica a una Apllicación [Dé clic aquí para inicar](./develop/jsapi/add_feature_layer/lab.md)
+
+### 2. Que tu mapa muestre lo que realmente quieres que vean los demas.
+
+El proposito del segundo laboratorio es poder mostar los datos de nuestro mapa, de una manera mucho más explicativa, usando distintos tipos de simbologia,ademas de usar varias a la vez, con el fin de mostrar más datos en un solo mapa, sin la necesidad de crear más de uno, así optimizando los recursos que se tienen.
+
+Ejercicio
+* Configuración de la simbologia de una capa [Dé clic aquí para inicar](./develop\jsapi\config_simbology_layer)
 
