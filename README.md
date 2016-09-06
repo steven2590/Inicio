@@ -52,5 +52,5 @@ Ejercicio
 El proposito del segundo laboratorio es poder mostar los datos de nuestro mapa, de una manera mucho más explicativa, usando distintos tipos de simbologia,ademas de usar varias a la vez, con el fin de mostrar más datos en un solo mapa, sin la necesidad de crear más de uno, así optimizando los recursos que se tienen.
 
 Ejercicio
-* Configuración de la simbologia de una capa [Dé clic aquí para inicar](./develop/jsapi/config_simbology_layer)
+* Configuración de la simbologia de una capa [Dé clic aquí para inicar](./develop/jsapi/config_simbology_layer/lab.md)
 
