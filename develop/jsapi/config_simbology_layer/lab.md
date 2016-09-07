@@ -16,9 +16,10 @@ En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScrip
     /*** ADD ***/
 	"esri/renderers/BlendRenderer",
      "esri/dijit/PopupTemplate", 
-     "esri/layers/FeatureLayer",      	"esri/symbols/SimpleFillSymbol",
+     "esri/layers/FeatureLayer",  
+    	"esri/symbols/SimpleFillSymbol",
      "esri/symbols/SimpleLineSymbol", 
-     "esri/symbols/SimpleMarkerSymbol"
+     "esri/symbols/SimpleMarkerSymbol",
 	"dojo/domReady!"
 ```
 De igual forma agregue las funciones: 
