@@ -1,3 +1,4 @@
+  -<!DOCTYPE html>
 <html>
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,7 +11,6 @@
       height: 100%;
       margin: 0;
     }
-
     #meta {
       position: absolute;
       left: 20px;
@@ -28,7 +28,6 @@
       font-family: arial;
       font-size: 0.9em;
     }
-
     #meta h3 {
       color: #666666;
       font-size: 1.1em;
@@ -40,25 +39,18 @@
   <script src="https://js.arcgis.com/3.17/"></script>
   <script>
     require([
-      
       "dojo/_base/array", 
       "esri/Color", 
-      
-      
+      "esri/map", 
       
       "dojo/domReady!"
       
-    ], function (array, Color,  )
-    {
-
+    ], function (array, Color,Map ){
       map = new Map("map", {
         basemap: "dark-gray", //"topo"
         center: [-76,5.5],
         zoom: 6
       });
-
-   
-      
 
     });
      </script>
@@ -68,6 +60,9 @@
       <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
          <div id="meta">
             
+            </ul>
+            
+         </div>
       </div>
     </div>
   </body>

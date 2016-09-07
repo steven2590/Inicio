@@ -7,30 +7,28 @@ En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScrip
 2. Dentro del require agregue "esri/dijit/PopupTemplate","esri/layers/FeatureLayer",
 "esri/map","esri/renderers/BlendRenderer","esri/symbols/SimpleFillSymbol","esri/symbols/SimpleLineSymbol",y"esri/symbols/SimpleMarkerSymbol"
 
- ```javascript
-  require([
-    "dojo/_base/array", 
+ ```
+ require([
+      "dojo/_base/array", 
       "esri/Color", 
-    /*** ADD ***/
+      "esri/map", 
 
+    /*** ADD ***/
+	"esri/renderers/BlendRenderer",
      "esri/dijit/PopupTemplate", 
-      "esri/layers/FeatureLayer",
-      "esri/map", "esri/renderers/BlendRenderer",
-      "esri/symbols/SimpleFillSymbol",
-      "esri/symbols/SimpleLineSymbol", 
-      "esri/symbols/SimpleMarkerSymbol"
+     "esri/layers/FeatureLayer",      	"esri/symbols/SimpleFillSymbol",
+     "esri/symbols/SimpleLineSymbol", 
+     "esri/symbols/SimpleMarkerSymbol"
 	"dojo/domReady!"
 ```
 De igual forma agregue las funciones: 
 
-PopupTemplate,FeatureLayer, Map, BlendRenderer, SimpleFillSymbol, SimpleLineSymbol,
-      SimpleMarkerSymbol:
+BlendRenderer,PopupTemplate,FeatureLayer, SimpleFillSymbol, SimpleLineSymbol,SimpleMarkerSymbol:
 
 ```
-  ], function (array, Color,           
+  ], function (array, Color, Map
 
-PopupTemplate,FeatureLayer, Map, BlendRenderer, SimpleFillSymbol, SimpleLineSymbol,
-      SimpleMarkerSymbol){
+BlendRenderer,PopupTemplate,FeatureLayer, SimpleFillSymbol, SimpleLineSymbol,SimpleMarkerSymbol){
   ```
 
 3.Ya con el código pegado en jsbin.com lo primero que haremos, será usar el servicio geografico que contiene la capa que buscamos representar con varias simbologia 
