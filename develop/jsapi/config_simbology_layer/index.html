@@ -1,4 +1,4 @@
- -<!DOCTYPE html>
+  -<!DOCTYPE html>
 <html>
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -92,6 +92,15 @@
         200, 200, 200
       ])));
       
+       layer = new FeatureLayer(layerUrl, {
+        outFields: ["TAS_NAT","Casos", "Porcentaje"],
+        opacity: 1,
+        infoTemplate: template
+      });
+
+      layer.setRenderer(renderer);
+      map.addLayer(layer);
+      
       renderer.setColorInfo({
         field: "Porcentaje",
         minDataValue: 0,
@@ -157,14 +166,7 @@
         ]
       });
       
-      layer = new FeatureLayer(layerUrl, {
-        outFields: ["TAS_NAT","Casos", "Porcentaje"],
-        opacity: 1,
-        infoTemplate: template
-      });
-
-      layer.setRenderer(renderer);
-      map.addLayer(layer);
+     
 
     });
      </script>
