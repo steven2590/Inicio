@@ -2,7 +2,7 @@
 
 En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScript.
 
-1. Haga clic  Click [create_starter_map/index.html](../create_starter_map/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
+1. Haga clic  Click [create_starter_map/index.html](./develop/jsapi3/create_starter_map/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
 
 2. Dentro del require agregue "esri/layers/FeatureLayer" y "esri/PopupTemplate",
 
