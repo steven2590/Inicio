@@ -1,4 +1,4 @@
-  -<!DOCTYPE html>
+ -<!DOCTYPE html>
 <html>
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -93,14 +93,7 @@
         200, 200, 200
       ])));
       
-       layer = new FeatureLayer(layerUrl, {
-        outFields: ["TAS_NAT","Casos", "Porcentaje"],
-        opacity: 1,
-        infoTemplate: template
-      });
 
-      layer.setRenderer(renderer);
-      map.addLayer(layer);
       
       renderer.setColorInfo({
         field: "Porcentaje",
@@ -111,7 +104,7 @@
           new Color([255, 0, 0])//Rojo
         ]
       });
-
+      
       //size the markers by the total households
       renderer.setVisualVariables([
         {
@@ -131,8 +124,6 @@
           ]
         }
       ]);      
-
-      
       
       //generate popup definition
       var template = new PopupTemplate({
@@ -166,6 +157,22 @@
           }
         ]
       });
+
+     
+
+      
+      
+      
+      
+      layer = new FeatureLayer(layerUrl, {
+        outFields: ["TAS_NAT","Casos", "Porcentaje"],
+        opacity: 1,
+        infoTemplate:template
+        
+      });
+
+      layer.setRenderer(renderer);
+      map.addLayer(layer);
       
      
 

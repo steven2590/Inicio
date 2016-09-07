@@ -1,4 +1,4 @@
-  -<!DOCTYPE html>
+   -<!DOCTYPE html>
 <html>
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -42,15 +42,12 @@
   <script>
     require([
       "dojo/_base/array", 
-      "esri/Color",
+      "esri/Color", 
       "esri/map",
-      
-      
-      "dojo/domReady!"
+     
       
     ], function (array, Color,Map
-      
-      ){
+                                                      ){
 
       map = new Map("map", {
         basemap: "dark-gray", //"topo"
@@ -58,7 +55,22 @@
         zoom: 6
       });
 
-   
+     
+      
+      
+      
+      
+      
+      
+      layer = new FeatureLayer(layerUrl, {
+        outFields: ["","", ""],
+        opacity: 1
+        
+      });
+
+      layer.setRenderer(renderer);
+      map.addLayer(layer);
+      
      
 
     });

@@ -83,21 +83,8 @@ var blendRendererOptions = {
          
 ```
 
-5. Paso a seguir,vamos a declarar las variables que usaremos para crear la simbologia que se propone al inicio de este laboratorio
 
-```
-layer = new FeatureLayer(layerUrl, {
-        outFields: ["TAS_NAT","Casos", "Porcentaje"],
-        opacity: 1,
-        infoTemplate: template
-      });
-
-      layer.setRenderer(renderer);
-      map.addLayer(layer);
-      
-```
-
-6. Despues de tener los parametros y variables, procedemos a utilizar los metodos que se llamaron, el primero será el de "Simbologia por Color", donde le daremos un color tenue (blanco) a los valores mas bajos y un color más fuerte (rojo) para los valores mas altos, enn este caso se representará la variable "porcentaje" la cual muestra el porcentaje de fallecidos de cada departamento respecto al pais
+5. Despues de tener los parametros y variables, procedemos a utilizar los metodos que se llamaron, el primero será el de "Simbologia por Color", donde le daremos un color tenue (blanco) a los valores mas bajos y un color más fuerte (rojo) para los valores mas altos, enn este caso se representará la variable "porcentaje" la cual muestra el porcentaje de fallecidos de cada departamento respecto al pais
 
   ```
 	//Color
@@ -135,7 +122,7 @@ layer = new FeatureLayer(layerUrl, {
       ]);      
         
   ```
-8.Representaremos la variable "Casos" que representa el numero de muertos de niños por desnutricion en cada departamento y ciudades representativas
+6.Representaremos la variable "Casos" que representa el numero de muertos de niños por desnutricion en cada departamento y ciudades representativas
 
   ``` 
 //Tamaño
@@ -169,7 +156,7 @@ layer = new FeatureLayer(layerUrl, {
 //
         
   ```
-9. Y finalmente agregamos la configuracion del Pop Up o ventana emergente
+7. Y finalmente agregamos la configuracion del Pop Up o ventana emergente
 
   ``` 
 //generate popup definition
@@ -206,6 +193,31 @@ layer = new FeatureLayer(layerUrl, {
       });
               
   ```
+8. Asignamos los valores del template ("TAS_NAT","Casos"y "Porcentaje") y su vizualizacion
+
+```
+layer = new FeatureLayer(layerUrl, {
+        outFields: ["","", ""],
+        opacity: 1
+      });
+
+      layer.setRenderer(renderer);
+      map.addLayer(layer);
+
+
+
+
+layer = new FeatureLayer(layerUrl, {
+        outFields: ["TAS_NAT","Casos", "Porcentaje"],
+        opacity: 1,
+        infoTemplate: template
+      });
+
+      layer.setRenderer(renderer);
+      map.addLayer(layer);
+      
+```
+
 
 9. de manera opcional agregaremos una breve descripcion del mapa en el recuadro blanco de la parte izquierda inferior que hemos visto desde el inicio del laboratorio.
 
