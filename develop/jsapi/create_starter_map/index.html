@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>3.x JS API Starter App</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>JS API Starter App</title>
 
-  <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.16/esri/css/esri.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+
   <style>
-    html,body,#mapDiv {
-      padding:0;
-      margin:0;
-      height:100%;
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
     }
   </style>
 
-  <script src="http://js.arcgis.com/3.16compact/"></script>
+  <script src="https://js.arcgis.com/4.0/"></script>
 
   <script>
-    var map;
-    require(["esri/map",
-             "dojo/domReady!"],
-      function(Map) {
-        map = new Map("mapDiv", {
-          center: [0, 0],
-          zoom: 10,
-          basemap: "dark-gray"
-        });
-      }
-    );
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      
+      "dojo/domReady!"
+    ], function(Map, MapView) {
+      var map = new Map({
+        basemap: "dark-gray"
+      });
+      var view = new MapView({
+        container: "viewDiv",
+        map: map,
+        center: [0, 0],
+        zoom: 2
+      });
+      
+    });
   </script>
 </head>
-
 <body>
-  <div id="mapDiv"></div>
+  <div id="viewDiv"></div>
 </body>
 </html>
