@@ -14,13 +14,17 @@ En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScrip
       "esri/map", 
 
     /*** ADD ***/
-	"esri/renderers/BlendRenderer",
-     "esri/dijit/PopupTemplate", 
-     "esri/layers/FeatureLayer",  
-    	"esri/symbols/SimpleFillSymbol",
-     "esri/symbols/SimpleLineSymbol", 
-     "esri/symbols/SimpleMarkerSymbol",
-	"dojo/domReady!"
+
+	 "esri/dijit/PopupTemplate", 
+      "esri/layers/ArcGISTiledMapServiceLayer", 
+      "esri/layers/FeatureLayer",
+      "esri/renderers/BlendRenderer",
+      "esri/symbols/SimpleFillSymbol",
+      "esri/symbols/SimpleLineSymbol", 
+      "esri/symbols/SimpleMarkerSymbol", 
+      "esri/renderers/Renderer",
+
+	 "dojo/domReady!"
 ```
 De igual forma agregue las funciones: 
 
@@ -29,7 +33,8 @@ BlendRenderer,PopupTemplate,FeatureLayer, SimpleFillSymbol, SimpleLineSymbol,Sim
 ```
   ], function (array, Color, Map
 
-BlendRenderer,PopupTemplate,FeatureLayer, SimpleFillSymbol, SimpleLineSymbol,SimpleMarkerSymbol){
+PopupTemplate, ArcGISTiledMapServiceLayer, FeatureLayer,  BlendRenderer, SimpleFillSymbol, SimpleLineSymbol,
+      SimpleMarkerSymbol,Renderer){
   ```
 
 3.Ya con el código pegado en jsbin.com lo primero que haremos, será usar el servicio geografico que contiene la capa que buscamos representar con varias simbologia 
@@ -50,9 +55,7 @@ var layerUrl = "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/service
 4. A continuacion agregaremos a nuestro código los parametros que se utilizaran de la libreria BlendRenderer con el fin de poder utilizar sus metodos para la simbologia :
 
 ```
-//Set the blendRenderer's parameters
-      
-      var blendRendererOptions = {
+var blendRendererOptions = {
         //blendMode:"color" //By default, it uses "source-over", uncomment to display different mode
         //See: http://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
         symbol: new SimpleMarkerSymbol().setOutline(new SimpleLineSymbol().setWidth(0)),
@@ -77,14 +80,13 @@ var layerUrl = "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/service
       renderer.backgroundFillSymbol = new SimpleFillSymbol().setColor(null).setOutline(new SimpleLineSymbol().setWidth(1).setColor(new Color([
         200, 200, 200
       ])));
-   
+         
 ```
 
 5. Paso a seguir,vamos a declarar las variables que usaremos para crear la simbologia que se propone al inicio de este laboratorio
 
 ```
-
-   layer = new FeatureLayer(layerUrl, {
+layer = new FeatureLayer(layerUrl, {
         outFields: ["TAS_NAT","Casos", "Porcentaje"],
         opacity: 1,
         infoTemplate: template
@@ -92,6 +94,7 @@ var layerUrl = "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/service
 
       layer.setRenderer(renderer);
       map.addLayer(layer);
+      
 ```
 
 6. Despues de tener los parametros y variables, procedemos a utilizar los metodos que se llamaron, el primero será el de "Simbologia por Color", donde le daremos un color tenue (blanco) a los valores mas bajos y un color más fuerte (rojo) para los valores mas altos, enn este caso se representará la variable "porcentaje" la cual muestra el porcentaje de fallecidos de cada departamento respecto al pais
@@ -132,7 +135,7 @@ var layerUrl = "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/service
       ]);      
         
   ```
-8. Y finalmente representaremos la variable "Casos" que representa el numero de muertos de niños por desnutricion en cada departamento y ciudades representativas
+8.Representaremos la variable "Casos" que representa el numero de muertos de niños por desnutricion en cada departamento y ciudades representativas
 
   ``` 
 //Tamaño
@@ -166,7 +169,45 @@ var layerUrl = "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/service
 //
         
   ```
-9. Finalmente agregaremos una breve descripcion del mapa en el recuadro blanco de la parte izquierda inferior que hemos visto desde el inicio del laboratorio.
+9. Y finalmente agregamos la configuracion del Pop Up o ventana emergente
+
+  ``` 
+//generate popup definition
+      var template = new PopupTemplate({
+        title: "{DPTO}",
+        "fieldInfos": [
+       
+          {
+            "fieldName": "TAS_NAT",
+            "label": "Tasa de Natalidad",
+            "visible": true,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            }
+          }, {
+            "fieldName": "Casos",
+            "label": "Número de casos por departamento",
+            "visible": true,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            }          
+          },{
+            "fieldName": "Porcentaje",
+            "label": "Procentaje respecto al país",
+            "visible": true,
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            }          
+          }
+        ]
+      });
+              
+  ```
+
+9. de manera opcional agregaremos una breve descripcion del mapa en el recuadro blanco de la parte izquierda inferior que hemos visto desde el inicio del laboratorio.
 
 ``` 
  });
