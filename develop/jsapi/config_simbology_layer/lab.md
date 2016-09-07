@@ -84,11 +84,14 @@ var layerUrl = "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/service
 
 ```
 
-  layer = new FeatureLayer(layerUrl, {
-        outFields: ["Porcentaje","TAS_NAT","Casos" ],
+   layer = new FeatureLayer(layerUrl, {
+        outFields: ["TAS_NAT","Casos", "Porcentaje"],
         opacity: 1,
         infoTemplate: template
       });
+
+      layer.setRenderer(renderer);
+      map.addLayer(layer);
 ```
 
 6. Despues de tener los parametros y variables, procedemos a utilizar los metodos que se llamaron, el primero será el de "Simbologia por Color", donde le daremos un color tenue (blanco) a los valores mas bajos y un color más fuerte (rojo) para los valores mas altos, enn este caso se representará la variable "porcentaje" la cual muestra el porcentaje de fallecidos de cada departamento respecto al pais
