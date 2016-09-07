@@ -1,26 +1,36 @@
-###Configurar la simbologia de una capa de manera multipe
+###Configurar la simbologia de una capa de manera multiple
 
 En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScript.
 
-1. Haga clic  Click [create_starter_map/index.html](./develop/jsapi3/create_starter_map/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
+1. Haga clic  Click [create_starter_map/index.html](./develop/jsapi3/create_starter_map2/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
 
-2. Dentro del require agregue "esri/layers/FeatureLayer" y "esri/PopupTemplate",
+2. Dentro del require agregue "esri/dijit/PopupTemplate","esri/layers/FeatureLayer",
+"esri/map","esri/renderers/BlendRenderer","esri/symbols/SimpleFillSymbol","esri/symbols/SimpleLineSymbol",y"esri/symbols/SimpleMarkerSymbol"
 
-  ```javascript
+ ```javascript
   require([
-    "esri/Map",
-    "esri/views/MapView",
+    "dojo/_base/array", 
+      "esri/Color", 
     /*** ADD ***/
 
-    "esri/layers/FeatureLayer",
-    "esri/PopupTemplate",
-
-    "dojo/domReady!"
+     "esri/dijit/PopupTemplate", 
+      "esri/layers/FeatureLayer",
+      "esri/map", "esri/renderers/BlendRenderer",
+      "esri/symbols/SimpleFillSymbol",
+      "esri/symbols/SimpleLineSymbol", 
+      "esri/symbols/SimpleMarkerSymbol"
+	"dojo/domReady!"
 ```
-De igual forma agregue la funcion FeatureLayer y PopupTemplate:
+De igual forma agregue las funciones: 
+
+PopupTemplate,FeatureLayer, Map, BlendRenderer, SimpleFillSymbol, SimpleLineSymbol,
+      SimpleMarkerSymbol:
 
 ```
-  ], function(Map, MapView,  FeatureLayer,PopupTemplate) {
+  ], function (array, Color,           
+
+PopupTemplate,FeatureLayer, Map, BlendRenderer, SimpleFillSymbol, SimpleLineSymbol,
+      SimpleMarkerSymbol){
   ```
 
 3.Ya con el código pegado en jsbin.com nos disponemos a modificar la latitud y longitud del Web Map ademas del zoom que queremos sobre el mapa.
