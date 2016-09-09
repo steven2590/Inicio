@@ -52,13 +52,13 @@ Ejercicio
 El propósito del segundo laboratorio es poder mostrar los datos de nuestro mapa, de una manera mucho más explicativa, usando distintos tipos de simbología, además de usar varias a la vez, con el fin de mostrar más datos en un solo mapa, sin la necesidad de crear más de uno, así optimizando los recursos que se tienen.
 
 Ejercicio
-* Configuración de la simbología de una capa [Dé clic aquí para iniciar](./develop/jsapi/config_simbology_layer/lab.md)
+* Configuración de la simbología de una capa [Dé clic aquí para iniciar](./develop/jsapi/config_simbology_layer/lab.md)(./develop/jsapi/Cluster/lab.md)
 
 ### 3. Creando una plantilla configurable.
 
 Después de realizar una serie de ejercicios básicos e intermedios, el laboratorio que se verá a continuación engloba todo lo visto, además de esto se podrá crear una aplicación que podrá usar otra persona aparte del que la creó o que no posee conocimiento sobre programación.
 
 Ejercicio
-* Configuración, creación y ejecución de una aplicación configurable [Dé clic aquí para inicar(./develop/jsapi/config_simbology_layer/lab.md)
+* Configuración, creación y ejecución de una aplicación configurable [Dé clic aquí para inicar](./develop/jsapi/Cluster/lab.md)
 
 

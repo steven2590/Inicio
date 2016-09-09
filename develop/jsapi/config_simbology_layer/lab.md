@@ -1,11 +1,11 @@
-###Configurar la simbologia de una capa de manera multiple
+###Configurar la simbología de una capa de manera múltiple
 
-En este laboratorio se  agrega una capa geográfica a un ArcGIS API for JavaScript.
+En este laboratorio se agrega una capa geográfica a un ArcGIS API for JavaScript.
 
-1. Haga clic  Click [Mapa de inicio](../create_starter_map2/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
+1. Haga clic  [Mapa de inicio](../create_starter_map2/index.html) y copie el contenido a un nuevo  [jsbin.com](http://jsbin.com).
 
 2. Dentro del require agregue "esri/dijit/PopupTemplate","esri/layers/FeatureLayer",
-"esri/map","esri/renderers/BlendRenderer","esri/symbols/SimpleFillSymbol","esri/symbols/SimpleLineSymbol",y"esri/symbols/SimpleMarkerSymbol"
+"esri/map","esri/renderers/BlendRenderer","esri/symbols/SimpleFillSymbol","esri/symbols/SimpleLineSymbol"y"esri/symbols/SimpleMarkerSymbol"
 
  ```
  require([
@@ -37,7 +37,7 @@ PopupTemplate, ArcGISTiledMapServiceLayer, FeatureLayer,  BlendRenderer, SimpleF
       SimpleMarkerSymbol,Renderer){
   ```
 
-3.Ya con el código pegado en jsbin.com lo primero que haremos, será usar el servicio geografico que contiene la capa que buscamos representar con varias simbologia 
+3.Ya con el código pegado en jsbin.com lo primero que haremos, será usar el servicio geográfico que contiene la capa que buscamos representar con varias simbologías 
 
 ```
   map = new Map("map", {
@@ -52,7 +52,7 @@ var layerUrl = "http://services3.arcgis.com/FrQaxkvr3gL42LSq/ArcGIS/rest/service
 
 ```
 
-4. A continuacion agregaremos a nuestro código los parametros que se utilizaran de la libreria BlendRenderer con el fin de poder utilizar sus metodos para la simbologia :
+4. A continuación agregaremos a nuestro código los parámetros que se utilizaran de la librería BlendRenderer con el fin de poder utilizar sus métodos para la simbología:
 
 ```
 var blendRendererOptions = {
@@ -84,7 +84,7 @@ var blendRendererOptions = {
 ```
 
 
-5. Despues de tener los parametros y variables, procedemos a utilizar los metodos que se llamaron, el primero será el de "Simbologia por Color", donde le daremos un color tenue (blanco) a los valores mas bajos y un color más fuerte (rojo) para los valores mas altos, enn este caso se representará la variable "porcentaje" la cual muestra el porcentaje de fallecidos de cada departamento respecto al pais
+5. Después de tener los parámetros y variables, procedemos a utilizar los métodos que se llamaron, el primero será el de "Simbología por Color", donde le daremos un color tenue (blanco) a los valores más bajos y un color más fuerte (rojo) para los valores más altos, en este caso se representará la variable "porcentaje" la cual muestra el porcentaje de fallecidos de cada departamento respecto al país
 
   ```
 	//Color
@@ -98,7 +98,7 @@ var blendRendererOptions = {
         ]
       });
   ```
-7. De forma similar haremos con la variable "TAS_NAT" (Tasa de Natalidad) la cual se representará con "Simbologia de tamaño" donde a mayor tamaño más nacimineto y viceversa
+7. De forma similar haremos con la variable "TAS_NAT" (Tasa de Natalidad) la cual se representará con "Simbología de tamaño" donde a mayor tamaño más nacimiento y viceversa
 
   ``` 
 //Tamaño
@@ -122,7 +122,7 @@ var blendRendererOptions = {
       ]);      
         
   ```
-6.Representaremos la variable "Casos" que representa el numero de muertos de niños por desnutricion en cada departamento y ciudades representativas
+6.Representaremos la variable "Casos" que representa el número de muertos de niños por desnutrición en cada departamento y ciudades representativas
 
   ``` 
 //Tamaño
@@ -156,7 +156,7 @@ var blendRendererOptions = {
 //
         
   ```
-7. Y finalmente agregamos la configuracion del Pop Up o ventana emergente
+7. Y finalmente agregamos la configuración del Pop Up o ventana emergente
 
   ``` 
 //generate popup definition
@@ -193,7 +193,7 @@ var blendRendererOptions = {
       });
               
   ```
-8. Asignamos los valores del template ("TAS_NAT","Casos"y "Porcentaje") y su vizualizacion
+8. Asignamos los valores del template ("TAS_NAT","Casos"y "Porcentaje") y su visualización
 
 ```
 layer = new FeatureLayer(layerUrl, {
@@ -219,7 +219,7 @@ layer = new FeatureLayer(layerUrl, {
 ```
 
 
-9. de manera opcional agregaremos una breve descripcion del mapa en el recuadro blanco de la parte izquierda inferior que hemos visto desde el inicio del laboratorio.
+9. de manera opcional agregaremos una breve descripción del mapa en el recuadro blanco de la parte izquierda inferior que hemos visto desde el inicio del laboratorio.
 
 ``` 
  });
@@ -232,7 +232,7 @@ layer = new FeatureLayer(layerUrl, {
 
     /*** ADD ***/
 
-            <h3>Esta capa contiene las estadisticas de desnutrición en Colombia para enero del año 2016</h3>
+            <h3>Esta capa contiene las estadísticas de desnutrición en Colombia para enero del año 2016</h3>
             <br>
             <br>En este mapa se muestra dos variables representadas por color y tamaño
             <ul>
@@ -243,7 +243,8 @@ layer = new FeatureLayer(layerUrl, {
         
 ```
 
-4. Despues de haber realizado el proceso el resultado debe ser muy similar a este:
+4. Después de haber realizado el proceso el resultado debe ser muy similar a este:
 
-* [Codigo](index.html)
+* [Código](index.html)
+
 
