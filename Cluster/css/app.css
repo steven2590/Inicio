@@ -1,0 +1,102 @@
+#map{
+	height: 100%;
+	width: 100%;
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans', sans-serif;
+}
+#topHead{
+  height: 115px;
+  background:#009ee1;
+  text-align: center;
+}
+
+#graphicsLayer1_layer circle{
+  cursor: pointer;
+}
+#credits{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: black;
+  text-decoration: none;
+}
+#credits-content{
+  display:none;
+}
+
+h3{
+  margin-top: 0;  
+}
+#video{
+  /*margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 100%;
+  max-height: 100%;
+  border: 2px solid black;
+  position: relative;
+  z-index: 99;
+  height: 50%;
+  top: auto;
+  width: 45%;*/
+      padding: 20px;
+}
+#mapMain{
+  height: 100%;
+  width:100%;
+  top: 20px;
+}
+#ytapiplayer{
+  top:5%;
+  left: 2%;
+  bottom:5%;
+}
+#player{
+  top:5%;
+  left: 2%;
+  bottom:5%;
+}
+#barra{
+  display: none;
+}
+@media only screen and (max-width: 530px) {
+  .loading-indicator{
+    display: none!important;
+  }
+  #mapMain{
+    height: 50%;
+  }
+  #video{
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+  }
+}
+@media only screen and (min-width: 531px) and (max-width: 641px) {
+.loading-indicator{
+    display: none!important;
+  }
+#mapMain{
+    width: 50%;
+  }
+  #credits{
+    display: none;
+  }
+  #video{
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+  }
+  .note{
+    width: 50%;
+  }
+}
