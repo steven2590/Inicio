@@ -14,4 +14,4 @@ Para hacer uso de la aplicación es necesario seguir los siguientes pasos:
 
 -Inicie sesión en AGOL y dirijase a la seccion de GRUPOS
 
-![Process](/Grupos.png)
+![Process](/Grupos.PNG)
