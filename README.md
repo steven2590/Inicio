@@ -1,4 +1,4 @@
-# ArcGIS para Desarrolladores, no Desarrolladores
+# AArcGIS para Desarrolladores, no Desarrolladores
 
 Este repositorio cuenta con información básica sobre como iniciar en el mundo de desarrollo con ArcGIS Online.
 
@@ -52,7 +52,7 @@ Ejercicio
 El propósito del segundo laboratorio es poder mostrar los datos de nuestro mapa, de una manera mucho más explicativa, usando distintos tipos de simbología, además de usar varias a la vez, con el fin de mostrar más datos en un solo mapa, sin la necesidad de crear más de uno, así optimizando los recursos que se tienen.
 
 Ejercicio
-* Configuración de la simbología de una capa [Dé clic aquí para iniciar](./develop/jsapi/config_simbology_layer/lab.md)(./develop/jsapi/Cluster/lab.md)
+* Configuración de la simbología de una capa [Dé clic aquí para iniciar](./develop/jsapi/config_simbology_layer/lab.md)
 
 ### 3. Creando una plantilla configurable.
 

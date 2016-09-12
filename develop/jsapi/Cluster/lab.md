@@ -1,4 +1,4 @@
-##Creando una plantilla configurable.
+##Creando una plantilla configurable...
 
 
 
@@ -20,11 +20,6 @@ Para hacer uso de la aplicación es necesario seguir los siguientes pasos:
 
 ![Process](/develop/jsapi/Cluster/grupo_creado.PNG)
 
-Nota: con anteroridad debe tener creado un Web Map en el que exista una cantidad de puntos considerable (más de mil)este web service será util para este ejercicio:
-
-http://services2.arcgis.com/9CNwmNo6GCOCKWA0/arcgis/rest/services/POI_Colombia/FeatureServer
-
-
 
 ```
 Nota: con anteroridad debe tener creado un Web Map en el que exista una cantidad de puntos considerable (más de mil)este web service será util para este ejercicio:
@@ -44,4 +39,9 @@ http://services2.arcgis.com/9CNwmNo6GCOCKWA0/arcgis/rest/services/POI_Colombia/F
 
 ![Process](/develop/jsapi/Cluster/Grupos_App_configurable.PNG)
 
+Despues de realizar los respctivos ajustes al AGOL lo que se prosede hacer es crear una Aplicacion Configurable, para esto nos vamos a dirigir a Mi Contenido
+
+![Process](/develop/jsapi/Cluster/Inicio_AGOL.PNG)
+
+![Process](/develop/jsapi/Cluster/Crear_Aplicacion.PNG)
 
