@@ -45,7 +45,7 @@ Después de realizar los respectivos ajustes al AGOL lo que se procede hacer es c
 
 En agregar elemento, seleccionamos una aplicación 
 
-![Process](/develop/jsapi/Cluster/Crear_Aplicacion.PNG)
+![Process](/develop/jsapi/Cluster/crearapp1PNG)
 
 
 Completamos el formulario de una forma muy similar como veremos a continuacion:
@@ -62,7 +62,7 @@ Guardamos esta carpeta dentro del servidor local.
 
 Nota: para configurar el servidor local ingrese [aquí](https://gist.github.com/jgravois/5e73b56fa7756fd00b89)
 
-copiamos la url del servidor local que aloja el idex de la aplicación del index
+copiamos la url del index alojado en el servidor local
 
 ```
 http://localhost/Cluster/index.html
@@ -72,7 +72,7 @@ Damos un título a la aplicación y le asignamos etiquetas, debe ser muy similar a
 
 ![Process](/develop/jsapi/Cluster/Configurable2.PNG)
 
-Ya creada la aplicación la compartimos en el grupo que creo en un inicio
+Ya creada la aplicación la compartimos en el grupo que se creó en un inicio
 
 ![Process](/develop/jsapi/Cluster/Compartir_grupo.PNG)
 
@@ -112,10 +112,10 @@ Ya creada la aplicación es necesario configurarla, para esto completaremos los c
 
 ![Process](/develop/jsapi/Cluster/4parametros.PNG)
 
-*Seleccionamos la capa (POI_Colombia)
-*Campos a mostrar (POI_NAME y Dexripcion_CAT_ID)
-*Titulo (Sitio de interés en la ciudad -Opcional)
-*Mapa Base (selecciones el mapa Base que mas le guste)
+* Seleccionamos la capa (POI_Colombia)
+* Campos a mostrar (POI_NAME y Dexripcion_CAT_ID)
+* Titulo (Sitio de interés en la ciudad -Opcional)
+* Mapa Base (selecciones el mapa Base que mas le guste)
 
 ![Process](/develop/jsapi/Cluster/4parametrosf.PNG)
 
