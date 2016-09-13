@@ -45,7 +45,7 @@ Después de realizar los respectivos ajustes al AGOL lo que se procede hacer es c
 
 En agregar elemento, seleccionamos una aplicación 
 
-![Process](/develop/jsapi/Cluster/crearapp1PNG)
+![Process](/develop/jsapi/Cluster/crearapp1.PNG)
 
 
 Completamos el formulario de una forma muy similar como veremos a continuacion:
